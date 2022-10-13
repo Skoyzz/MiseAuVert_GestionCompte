@@ -1,0 +1,14 @@
+.banniere{
+    border: solid 3px black;
+    position: fixed;
+    bottom : 0;
+    left: 0;
+    width: 100%;
+    background: darkgrey;
+}
+
+.text-cookie, .bouton-cookie{
+    text-align: center;
+   /* la couleur du texte */ color: white;
+    text-decoration: none;
+}
