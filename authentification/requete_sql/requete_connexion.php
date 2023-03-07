@@ -1,5 +1,5 @@
 <?php
-include 'dbconnexion.php';
+    include 'dbconnexion.php';
 
 $req = $conn->prepare ("SELECT * FROM user WHERE compte_identifiant = ?");
 
@@ -14,7 +14,7 @@ if (password_verify($_POST['mdp'], $mdp)) {
     if ($result[0]['compte_identifiant'] == 'prof1234') {
         header("location: ../../../administrateur/php-administrateur/bienvenue.php");
     } else {
-        header("location: ../../../utilisateur/php-utilisateur/bienvenue.php");
+        header("location: ../../../utilisateur/php/bienvenue.php");
     }
 }
 else

@@ -13,8 +13,8 @@ if (isset($_GET['accepte-cookie'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connexion</title>
 </head>
-<link rel="stylesheet" href="../../../general_css/index-style.css">
-<link rel="stylesheet" href="../../general_css/cookie-style.css">
+<link rel="stylesheet" href="../general_css/index-style.css">
+<link rel="stylesheet" href="../general_css/cookie-style.css">
 <link rel="stylesheet" href="style_log.css">
 
 <body>
@@ -39,6 +39,7 @@ if (isset($_GET['accepte-cookie'])) {
         <input type="submit" value="Connnectez vous">
     </form>
 </div>
+<!-- DEBUT DE LA RUBRIQUE COOKIE -->
 <?php
 if(!isset($_COOKIE['accepte-cookie'])){
 ?>
@@ -46,12 +47,17 @@ if(!isset($_COOKIE['accepte-cookie'])){
     <div class="text-cookie">
         <p>Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
     </div>
-    <div class="bouton-cookie">
-        <button><a href="?accepte-cookie">Ok j'accepte</a></button>
+    <div class="bouton-cookie noactive">
+
+        <button class="cookie"><a href="?accepte-cookie">Ok j'accepte</a></button>
+		<button class="cookie"><a href="">Je refuse</a></button>
+
     </div>
     <?php
     }
+	
     ?>
-</div>
+<!-- FIN DE LA RUBRIQUE COOKIE -->
+</html>
 </body>
 </html>

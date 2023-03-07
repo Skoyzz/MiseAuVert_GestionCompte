@@ -46,7 +46,7 @@ if(isset($_GET['accepte-cookie'])){
 </div>
 <!-- Fin formulaire d'inscription -->
 
-<!-- Rubrique Cookie-->
+<!-- DEBUT DE LA RUBRIQUE COOKIE -->
 <?php
 if(!isset($_COOKIE['accepte-cookie'])){
 ?>
@@ -54,13 +54,16 @@ if(!isset($_COOKIE['accepte-cookie'])){
     <div class="text-cookie">
         <p>Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
     </div>
-    <div class="bouton-cookie">
-        <button><a href="?accepte-cookie">Ok j'accepte</a></button>
+    <div class="bouton-cookie noactive">
+
+        <button class="cookie"><a href="?accepte-cookie">Ok j'accepte</a></button>
+		<button class="cookie"><a href="">Je refuse</a></button>
+
     </div>
     <?php
     }
-?>
-<!-- Fin de la rubrique cookie-->
-
+	
+    ?>
+<!-- FIN DE LA RUBRIQUE COOKIE -->
 </body>
 </html>

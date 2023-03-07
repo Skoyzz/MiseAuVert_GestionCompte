@@ -1,16 +1,11 @@
-<!-- DEBUT DE LA REQUÊTE SI CONNECTER OU NON-->
 <?php
-session_start();
-if ($_SESSION['connecte'] != "oui") {
-    header("Location: ../../authentification/connexion.php");
-    /* <!-- FIN DE LA REQUÊTE SI CONNECTER OU NON -->*/
     /* <!-- DEBUT DE LA REQUÊTE DES COOKIES --> */
     if (isset($_GET['accepte-cookie'])) {
         setcookie('accepte-cookie', 'true', time() + 365 * 24 * 3600);
         header('location:presentation-entreprise.php');
     }
-}
 ?>
+
 <!-- FIN DE LA REQUÊTE DES COOKIES -->
 <!doctype html>
 <html lang="fr">
@@ -28,18 +23,15 @@ if ($_SESSION['connecte'] != "oui") {
 <body>
 <!-- DEBUT DU HEADER -->
 <div class="header_logo">
-    <a href = "bienvenue.php"><img class="container-logo" src="../../general_img/logo.png">
+    <a href = "../../index.php"><img class="container-logo" src="../../general_img/logo.png">
 </div>
+
 <div class="header_menu">
-    <a href="presentation-entreprise.php" class="container-menu"> Présentation de l'entreprise</a><br>
-    <a href="nos-services.php" class="container-menu"> Nos services</a><br>
-    <a href="hotel-canin.php" class="container-menu">Hôtel Canin</a><br>
-    <a href="camping-canin.php" class="container-menu"> Le camping Canin</a><br>
-    <a href="pension-feline.php" class="container-menu"> Pension féline</a><br>
-    <a href="nous-contactez.php" class="container-menu"> Nous contactez</a><br>
+    <a href="presentation-entreprise.php">Présentation entreprise</a>
+    <a href="nos-services.php" class="container-menu"> Nos services</a>
+    <a href="nous-contactez.php" class="container-menu"> Nous contactez</a>
     <a href="../../authentification/deconnexion.php" class="header_menu" onclick="alert('Vous allez être déconnectée')" <button>Se déconnecter</button></a><br>
 </div>
-<!-- FIN DU HEADER -->
 
 <!-- DEBUT DU BODY -->
 
@@ -85,30 +77,34 @@ if ($_SESSION['connecte'] != "oui") {
 <p> Il est tout à fait possible que d’autres pensions viennent rejoindre la scop.</p>
 <p> L’entreprise est soumise à la TVA.</p>
 
-<div class="information">
+
 <br><br>
-    <p>Plus d’information sur les Scop SARL : https://www.creerentreprise.fr/statut-scop-definition-creation/
+    <p>Plus d’information sur les Scop SARL : <a href="https://www.creerentreprise.fr/statut-scop-definition-creation/">Statut Scop</a>
 <br><br>
     <p>Les pensions "La mise au vert" sont affiliées au Syndicat National des professions du chien et du chat (SNPCC) et sont soumis au code rural concernant leur activité :  <a href "https://www.snpcc.com/pension">La SNPCC - Pension</a></p>
-    <p>Les pensions "La mise au vert" sont partenaires SPA : <a href "https://www.la-spa.fr">La SPA</a></p>
+    <p>Les pensions "La mise au vert" sont partenaires SPA : <a href="https://www.la-spa.fr">La SPA</a></p>
 </div>
-
+<br><br><br><br>
 </body>
 <!-- FIN DU BODY -->
 
-<!-- DEBUT DE LA RUBRIQUE COOKIE --->
+<!-- DEBUT DE LA RUBRIQUE COOKIE -->
 <?php
-if(!isset($_COOKIE['accepte-cookie'])){
+    if(!isset($_COOKIE['accepte-cookie'])){
 ?>
 <div class="banniere">
     <div class="text-cookie">
         <p>Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
     </div>
-    <div class="bouton-cookie">
-        <button><a href="?accepte-cookie">Ok j'accepte</a></button>
+    <div class="bouton-cookie noactive">
+
+        <button class="cookie"><a href="?accepte-cookie">Ok j'accepte</a></button>
+		<button class="cookie"><a href="">Je refuse</a></button>
+
     </div>
     <?php
     }
+	
     ?>
-<!-- FIN DE LA RUBRIQUE COOKIE --->
+<!-- FIN DE LA RUBRIQUE COOKIE -->
 </html>

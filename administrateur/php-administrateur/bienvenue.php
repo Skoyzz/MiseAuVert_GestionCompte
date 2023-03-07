@@ -24,7 +24,7 @@
 
 <!-- DEBUT DU BODY -->
 
-<center><h1>Bienvenue Administateur !</h1></center>
+<center><h1>Bienvenue Administrateur !</h1></center>
    <br><br>
    <center> <img src="../img-admin/construction_website.jpg"></center>
 </body>

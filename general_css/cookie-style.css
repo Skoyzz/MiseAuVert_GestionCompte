@@ -9,6 +9,10 @@
 
 .text-cookie, .bouton-cookie{
     text-align: center;
-   /* la couleur du texte */ color: white;
+   /* la couleur du texte -> */ color: white;
+
+}
+
+.cookie{
     text-decoration: none;
 }

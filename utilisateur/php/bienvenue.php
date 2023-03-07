@@ -34,12 +34,9 @@ if ($_SESSION['connecte'] != "oui") {
     <a href = "bienvenue.php"><img class="container-logo" src="../../general_img/logo.png">
 </div>
 <div class="header_menu">
-    <a href="presentation-entreprise.php" class="container-menu"> Présentation de l'entreprise</a><br>
-    <a href="nos-services.php" class="container-menu"> Nos services</a><br>
-    <a href="hotel-canin.php" class="container-menu">Hôtel Canin</a><br>
-    <a href="camping-canin.php" class="container-menu"> Le camping Canin</a><br>
-    <a href="pension-feline.php" class="container-menu"> Pension féline</a><br>
-    <a href="nous-contactez.php" class="container-menu"> Nous contactez</a><br>
+    <a href="presentation-entreprise.php">Présentation entreprise</a>
+    <a href="nos-services.php" class="container-menu"> Nos services</a>
+    <a href="nous-contactez/nous-contactez.php" class="container-menu"> Nous contactez</a>
     <a href="../../authentification/deconnexion.php" class="header_menu" onclick="alert('Vous allez être déconnectée')" <button>Se déconnecter</button></a><br>
 </div>
 <!-- FIN DU HEADER -->
@@ -57,11 +54,15 @@ if(!isset($_COOKIE['accepte-cookie'])){
     <div class="text-cookie">
         <p>Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
     </div>
-    <div class="bouton-cookie">
-        <button><a href="?accepte-cookie">Ok j'accepte</a></button>
+    <div class="bouton-cookie noactive">
+
+        <button class="cookie"><a href="?accepte-cookie">Ok j'accepte</a></button>
+		<button class="cookie"><a href="">Je refuse</a></button>
+
     </div>
     <?php
     }
+	
     ?>
 <!-- FIN DE LA RUBRIQUE COOKIE -->
 </html>

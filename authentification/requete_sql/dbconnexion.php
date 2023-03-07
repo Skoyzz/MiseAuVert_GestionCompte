@@ -2,7 +2,7 @@
 $dbname = "mise_au_vert";
 $dbuser = "root";
 $dbhost = "localhost";
-$dbpassword = "";
+$dbpassword = "root";
 try{
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",
         $dbuser ,$dbpassword);

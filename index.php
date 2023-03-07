@@ -25,6 +25,7 @@ if(isset($_GET['accepte-cookie'])){
     <a href = "index.php"><img class="container-logo" src="general_img/logo.png">
 </div>
 <div class="header_menu">
+    <a href="utilisateur/php/presentation-entreprise.php" class="container-menu">Présentation Entreprise</a>
     <a href="authentification/connexion.php" class="container-menu">Connexion</a>
     <a href="authentification/inscription.php" class="container-menu"> Inscription</a>
 </div>
@@ -37,17 +38,22 @@ if(isset($_GET['accepte-cookie'])){
 
 <!-- DEBUT DE LA RUBRIQUE COOKIE -->
 <?php
-if(!isset($_COOKIE['accepte-cookie'])){
+    if(!isset($_COOKIE['accepte-cookie'])){
 ?>
+
 <div class="banniere">
     <div class="text-cookie">
-        <p>Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
+        <p> Notre site internet utilise les cookies pour une meilleure experience utilisateur</p>
     </div>
-    <div class="bouton-cookie">
-        <button><a href="?accepte-cookie">Ok j'accepte</a></button>
+    <div class="bouton-cookie noactive">
+
+        <button class="cookie"><a href="?accepte-cookie">Ok j'accepte</a></button>
+		<button class="cookie"><a href="">Je refuse</a></button>
+
     </div>
     <?php
     }
+	
     ?>
 <!-- FIN DE LA RUBRIQUE COOKIE -->
 </html>
