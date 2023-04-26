@@ -1,6 +1,6 @@
 <img src="general_img/logo.png"/>
 
-* AP Groupe 6 *
+* AP Groupe 6
 
 Site web : Pensions pour animaux « La mise au vert »
 
