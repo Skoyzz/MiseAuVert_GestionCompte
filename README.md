@@ -1,10 +1,10 @@
 <img src="general_img/logo.png"/>
 
-* AP Groupe 6 "Quentin Boidin" "Rodolphe Wallerand" "Lucas Nibert"
+* AP Groupe 6 *
 
 Site web : Pensions pour animaux « La mise au vert »
 
-Vous retrouvez les différentes rubriques quel que :
+Vous retrouvez les différentes rubriques de mise au vert quel que :
 
 - Présentation de l’entreprise :
 - Hôtel canin
@@ -12,9 +12,7 @@ Vous retrouvez les différentes rubriques quel que :
 - Pension féline
 - Nos services
 
-Avec une sécurisation de vos données :
-- Avec le hachage de mot de passe dans la base de données
-- L'avertisseur de cookie sur les toutes les pages du site (une fois accepter, il sera plus visible sur 
-                                   les pages, sauf si on supprime les données de navigation de son navigateur)
-
-Avec aussi un côté administateur, qui pourra gérer ... (qui est encore sous developpement car aucune idée de quoi mettre dedans)
+Dans cette partie de programamtion, on peut retrouver la gestion du compte avec un côté utilisateur et côté administrateur:
+- La modification de compte (si toute les informations du compte sont entières)
+- Création de compte
+- Suppression du compte
